@@ -28,11 +28,11 @@
         <body>
 
             <header>
-                <div class="vid">
+                <!-- <div class="vid">
                     <video width="100%" autoplay="autoplay" muted="muted" loop="loop">
                         <source src="/img/home/shoes.mp4" type="video/mp4">
                     </video>
-                </div>
+                </div> -->
                 <div class="container h-100">
                     <div class="d-flex h-100 text-center justify-content-around align-items-center">
 
@@ -40,7 +40,7 @@
                             <a class="nav-link" href="{{ path ('homepage') }}"><img src="/img/South-West-Store-Logo.png" alt="Logo South-West-Store"></a>
                         </div>
                         <div class=" col-md-8 align-self-center d-none d-md-inline-block">
-                            <h1>Bienvenue chez South-West-Store</h1>
+                            <h1>Bienvenue dans la boutique de Nemo</h1>
                         </div>
                     </div>
                 </div>
@@ -50,7 +50,7 @@
             <nav id="navbar" class="navbar">
                 <div class="left">
 
-                    <a class="nav-link" href="{{ path ('show_products') }}">Shop</a>
+                    <a class="nav-link" href="{{ path ('show_products') }}">Boutique</a>
 
                     {% if not is_granted('IS_AUTHENTICATED_REMEMBERED') %}
                         <a class="nav-link" href="{{ path('app_register') }}">S'inscrire</a>
@@ -138,7 +138,7 @@
                 </div>
             </div>
             <footer>
-                <p class="text-center">&copy; Copyright 2019 - South-West-Store - Ne pas reproduire |
+                <p class="text-center">&copy; Copyright 2019 - La boutique de Nemo - Ne pas reproduire |
                     <a href="{{ path('mentions') }}">Mentions légales</a>
                     |
                     <a href="{{ path('cgv') }}">CGV</a>

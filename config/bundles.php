@@ -15,4 +15,23 @@ return [
     Symfony\Bundle\MakerBundle\MakerBundle::class => ['dev' => true],
     Symfony\Bundle\WebServerBundle\WebServerBundle::class => ['dev' => true],
     Knp\Bundle\PaginatorBundle\KnpPaginatorBundle::class => ['all' => true],
+    EasyCorp\Bundle\EasyDeployBundle\EasyDeployBundle::class => ['dev' => true, 'test' => true],
 ];
+
+
+class AppKernel extends Kernel
+{
+    public function registerBundles()
+    {
+        
+
+        if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
+            
+            $bundles[] = new EasyCorp\Bundle\EasyDeployBundle\EasyDeployBundle();
+        }
+
+        return $bundles;
+    }
+
+    
+}
